@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -5,6 +6,10 @@ import { CheckCircle, Package, Mail, Home } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function OrderConfirmationPage() {
+  const orderNumber = useMemo(() => {
+    return `#AGN${Math.floor(Math.random() * 100000).toString().padStart(5, '0')}`;
+  }, []);
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
@@ -38,7 +43,7 @@ export function OrderConfirmationPage() {
               <div>
                 <p className="text-sm text-gray-600 mb-1">Número do Pedido</p>
                 <p className="font-['Playfair_Display'] text-2xl font-semibold text-[#2C2C2C]">
-                  #AGN{Math.floor(Math.random() * 100000).toString().padStart(5, '0')}
+                  {orderNumber}
                 </p>
               </div>
               <div className="text-right">
@@ -110,7 +115,10 @@ export function OrderConfirmationPage() {
             <p className="text-gray-600 mb-2">
               Precisa de ajuda? Fale com nosso time
             </p>
-            <a href="mailto:contato@agnello.com.br" className="text-[#8B1538] font-semibold hover:text-[#6D0F2C]">
+            <a
+              href="mailto:contato@agnello.com.br"
+              className="text-[#8B1538] font-semibold hover:text-[#6D0F2C]"
+            >
               contato@agnello.com.br
             </a>
           </motion.div>

@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { useState } from 'react';
+
 import { CartProvider } from '../context/CartContext';
+
 import { HomePage } from './pages/HomePage';
 import { ProductListPage } from './pages/ProductListPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
@@ -10,6 +12,7 @@ import { CartPage } from './pages/CartPage';
 import { CheckoutPage } from './pages/CheckoutPage';
 import { OrderConfirmationPage } from './pages/OrderConfirmationPage';
 import { AboutPage } from './pages/AboutPage';
+
 import { ChatBotButton } from './components/ChatBotButton';
 import { ChatBot } from './components/ChatBot';
 
@@ -32,10 +35,7 @@ export default function App() {
             <Route path="/sobre" element={<AboutPage />} />
           </Routes>
 
-          {/* ChatBot Button - Available on all pages */}
           <ChatBotButton onClick={() => setShowChatBot(true)} />
-
-          {/* ChatBot Modal */}
           {showChatBot && <ChatBot onClose={() => setShowChatBot(false)} />}
         </div>
       </BrowserRouter>

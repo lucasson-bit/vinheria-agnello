@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Wine, Heart, Award, Users } from 'lucide-react';
@@ -7,7 +8,7 @@ export function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
@@ -53,20 +54,20 @@ export function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Em 1985, o Sr. Giulio Agnello e sua esposa Bianca deixaram a região do Piemonte, na Itália, 
-                    trazendo consigo não apenas suas malas, mas uma herança familiar de gerações dedicadas 
+                    Em 1985, o Sr. Giulio Agnello e sua esposa Bianca deixaram a região do Piemonte, na Itália,
+                    trazendo consigo não apenas suas malas, mas uma herança familiar de gerações dedicadas
                     à viticultura e ao amor pelos vinhos finos.
                   </p>
                   <p>
-                    Ao desembarcar em Bento Gonçalves, no coração da Serra Gaúcha, o casal viu a oportunidade 
-                    de unir a tradição italiana com o crescente mercado brasileiro de vinhos. Assim nasceu a 
-                    Vinheria Agnello, uma pequena loja que rapidamente se tornou referência em curadoria e 
+                    Ao desembarcar em Bento Gonçalves, no coração da Serra Gaúcha, o casal viu a oportunidade
+                    de unir a tradição italiana com o crescente mercado brasileiro de vinhos. Assim nasceu a
+                    Vinheria Agnello, uma pequena loja que rapidamente se tornou referência em curadoria e
                     atendimento personalizado.
                   </p>
                   <p>
-                    Por mais de três décadas, a família Agnello tem se dedicado a selecionar os melhores vinhos 
-                    nacionais e importados, sempre com o mesmo cuidado e paixão do primeiro dia. Hoje, com a 
-                    transformação digital, levamos nossa expertise para todo o Brasil, mantendo o mesmo 
+                    Por mais de três décadas, a família Agnello tem se dedicado a selecionar os melhores vinhos
+                    nacionais e importados, sempre com o mesmo cuidado e paixão do primeiro dia. Hoje, com a
+                    transformação digital, levamos nossa expertise para todo o Brasil, mantendo o mesmo
                     compromisso com a qualidade e o atendimento personalizado.
                   </p>
                 </div>
@@ -181,17 +182,17 @@ export function AboutPage() {
                 Sr. Giulio - Seu Sommelier Digital
               </h3>
               <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-                Inspirado no fundador da Vinheria Agnello, o Sr. Giulio digital traz toda a experiência 
-                e conhecimento de mais de 30 anos no mundo dos vinhos. Faça nosso quiz de recomendação 
+                Inspirado no fundador da Vinheria Agnello, o Sr. Giulio digital traz toda a experiência
+                e conhecimento de mais de 30 anos no mundo dos vinhos. Faça nosso quiz de recomendação
                 ou converse com ele através do chat para descobrir o vinho ideal para você.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/quiz"
+                <Link
+                  to="/quiz"
                   className="px-8 py-3 bg-white text-[#8B1538] rounded-xl font-semibold hover:bg-[#FAF8F3] transition-colors"
                 >
                   Fazer Quiz
-                </a>
+                </Link>
                 <button
                   className="px-8 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-colors"
                 >

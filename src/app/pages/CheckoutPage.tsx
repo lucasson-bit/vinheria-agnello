@@ -22,7 +22,6 @@ export function CheckoutPage() {
     address: '',
     number: '',
     complement: '',
-    neighborhood: '',
     city: '',
     state: ''
   });
@@ -148,6 +147,7 @@ export function CheckoutPage() {
                     <input
                       type="text"
                       required
+                      placeholder="Ex: Maria Oliveira"
                       value={deliveryInfo.name}
                       onChange={(e) => setDeliveryInfo({ ...deliveryInfo, name: e.target.value })}
                       className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -162,6 +162,7 @@ export function CheckoutPage() {
                       <input
                         type="email"
                         required
+                        placeholder="seuemail@exemplo.com"
                         value={deliveryInfo.email}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, email: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -174,6 +175,7 @@ export function CheckoutPage() {
                       <input
                         type="tel"
                         required
+                        placeholder="(11) 99999-9999"
                         value={deliveryInfo.phone}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -189,6 +191,7 @@ export function CheckoutPage() {
                       <input
                         type="text"
                         required
+                        placeholder="00000-000"
                         value={deliveryInfo.cep}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, cep: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -201,6 +204,7 @@ export function CheckoutPage() {
                       <input
                         type="text"
                         required
+                        placeholder="Rua, Avenida, Alameda..."
                         value={deliveryInfo.address}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, address: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -216,6 +220,7 @@ export function CheckoutPage() {
                       <input
                         type="text"
                         required
+                        placeholder="123"
                         value={deliveryInfo.number}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, number: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -227,6 +232,7 @@ export function CheckoutPage() {
                       </label>
                       <input
                         type="text"
+                        placeholder="Apto, bloco, casa, referência"
                         value={deliveryInfo.complement}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, complement: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -242,6 +248,7 @@ export function CheckoutPage() {
                       <input
                         type="text"
                         required
+                        placeholder="Ex: São Paulo"
                         value={deliveryInfo.city}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, city: e.target.value })}
                         className="w-full px-4 py-3 bg-[#FAF8F3] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538] focus:border-transparent"
@@ -254,6 +261,7 @@ export function CheckoutPage() {
                       <input
                         type="text"
                         required
+                        placeholder="SP"
                         maxLength={2}
                         value={deliveryInfo.state}
                         onChange={(e) => setDeliveryInfo({ ...deliveryInfo, state: e.target.value.toUpperCase() })}

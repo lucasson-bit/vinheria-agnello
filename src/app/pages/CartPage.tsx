@@ -72,7 +72,7 @@ export function CartPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <motion.div
@@ -128,7 +128,11 @@ export function CartPage() {
                         {/* Quantity Controls */}
                         <div className="flex items-center space-x-3">
                           <button
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            onClick={() =>
+                              item.quantity > 1
+                                ? updateQuantity(item.id, item.quantity - 1)
+                                : removeFromCart(item.id)
+                            }
                             className="w-9 h-9 bg-[#FAF8F3] hover:bg-[#8B1538] hover:text-white rounded-lg transition-colors flex items-center justify-center"
                           >
                             <Minus className="w-4 h-4" />

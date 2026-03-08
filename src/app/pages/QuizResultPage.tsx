@@ -9,9 +9,12 @@ import { motion } from 'motion/react';
 
 export function QuizResultPage() {
   const [searchParams] = useSearchParams();
-  const color = searchParams.get('color') || '#8B0000';
-  const colorInfo = colorDescriptions[color];
-  const recommendedWines = getWinesByColor(color);
+  const requestedColor = searchParams.get('color') || '#8B0000';
+
+  const validColor = colorDescriptions[requestedColor] ? requestedColor : '#8B0000';
+
+  const colorInfo = colorDescriptions[validColor];
+  const recommendedWines = getWinesByColor(validColor);
 
   const getColorGradient = (colorCode: string) => {
     switch (colorCode) {
@@ -57,7 +60,7 @@ export function QuizResultPage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-              className={`relative w-64 h-64 rounded-full bg-gradient-to-br ${getColorGradient(color)} shadow-2xl flex items-center justify-center`}
+              className={`relative w-64 h-64 rounded-full bg-gradient-to-br ${getColorGradient(validColor)} shadow-2xl flex items-center justify-center`}
             >
               <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm" />
               <div className="relative text-center p-8">
