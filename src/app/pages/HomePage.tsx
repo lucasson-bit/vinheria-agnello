@@ -5,6 +5,10 @@ import { Shield, Truck, Award, ArrowRight, Sparkles, Wine as WineIcon, Calendar 
 import { motion } from 'motion/react';
 import { wines } from '../../data/wines';
 import { ProductCard } from '../components/ProductCard';
+import tintoImg from '../../assets/home/tinto.jpg';
+import brancoImg from '../../assets/home/branco.jpg';
+import roseImg from '../../assets/home/rose.jpg';
+import espumanteImg from '../../assets/home/espumante.jpeg';
 
 export function HomePage() {
   const featuredWines = wines.slice(0, 3);
@@ -250,25 +254,25 @@ export function HomePage() {
                   name: 'Tintos',
                   type: 'tinto',
                   description: 'Encorpados e complexos',
-                  image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+                  image: tintoImg,
                 },
                 {
                   name: 'Brancos',
                   type: 'branco',
                   description: 'Frescos e elegantes',
-                  image: 'https://static.millesima.com/s3/attachements/editorial/h412px/drywhitewine.jpg',
+                  image: brancoImg,
                 },
                 {
                   name: 'Rosés',
                   type: 'rosé',
                   description: 'Delicados e frutados',
-                  image: 'https://decantervinhos.vtexassets.com/arquivos/ids/159531-800-1040?v=638798215744070000&width=600&aspect=true',
+                  image: roseImg,
                 },
                 {
                   name: 'Espumantes',
                   type: 'espumante',
                   description: 'Borbulhantes e festivos',
-                  image: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+                  image: espumanteImg,
                 },
               ].map((category, index) => (
                 <motion.div
