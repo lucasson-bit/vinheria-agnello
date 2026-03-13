@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { X, Send, Bot, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import giulioBackground from '../../assets/home/Giulio.jpeg';
 
 interface Message {
   id: string;
@@ -129,7 +130,15 @@ export function ChatBot({ onClose }: ChatBotProps) {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-[#FAF8F3]">
+        <div
+          className="flex-1 overflow-y-auto p-6 space-y-4 bg-[#FAF8F3]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(250, 248, 243, 0.58), rgba(250, 248, 243, 0.58)), url(${giulioBackground})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
           <AnimatePresence>
             {messages.map((message) => (
               <motion.div
